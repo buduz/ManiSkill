@@ -17,7 +17,7 @@ def solve(env: StackCubeEnv, seed=None, debug=False, vis=False):
         "pd_joint_pos",
         "pd_joint_pos_vel",
     ], env.unwrapped.control_mode
-    if env.unwrapped.robot_uids == "xarm6_robotiq":
+    if env.unwrapped.robot_uids == "xarm6_robotiq" or env.unwrapped.robot_uids == "xarm6_robotiq_wristcam":
         planner_cls = XArm6RobotiqMotionPlanningSolver
     elif env.unwrapped.robot_uids == "xarm6_pandagripper":
         planner_cls = XArm6PandaGripperMotionPlanningSolver

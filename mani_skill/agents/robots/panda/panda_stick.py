@@ -176,3 +176,5 @@ class PandaStick(BaseAgent):
     def is_static(self, threshold: float = 0.2):
         qvel = self.robot.get_qvel()[..., :-2]
         return torch.max(torch.abs(qvel), 1)[0] <= threshold
+
+# class XArm6RobotiqWristCamera

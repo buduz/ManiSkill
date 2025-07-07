@@ -10,7 +10,7 @@ from mani_skill.examples.motionplanning.panda.utils import (
 def solve(env: PickCubeEnv, seed=None, debug=False, vis=False):
     env.reset(seed=seed)
 
-    if env.unwrapped.robot_uids == "xarm6_robotiq":
+    if env.unwrapped.robot_uids == "xarm6_robotiq" or env.unwrapped.robot_uids == "xarm6_robotiq_wristcam":
         planner_cls = XArm6RobotiqMotionPlanningSolver
     elif env.unwrapped.robot_uids == "xarm6_pandagripper":
         planner_cls = XArm6PandaGripperMotionPlanningSolver
